@@ -1,6 +1,6 @@
 [extension]
 id = "vim-tab"
-version = "0.1.0"
+version = "0.1.1"
 api_version = 1
 name = "Vim Terminal Tab"
 description = "Open local text files in a dedicated Vim tab in Windows Terminal."
