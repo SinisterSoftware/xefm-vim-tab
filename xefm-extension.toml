@@ -1,0 +1,22 @@
+[extension]
+id = "vim-tab"
+version = "0.1.0"
+api_version = 1
+name = "Vim Terminal Tab"
+description = "Open local text files in a dedicated Vim tab in Windows Terminal."
+min_xefm = "1.10.0"
+platforms = ["windows"]
+updates = "github:SinisterSoftware/xefm-vim-tab"
+
+[contributes.actions]
+"vim-tab.edit-file" = { entry = "vim_tab.actions:edit_file", description = "Edit a text file in the dedicated Vim terminal tab" }
+
+
+[requires]
+programs = ["vim", "wt", "powershell"]
+
+[contributes.menus]
+"vim-tab.edit-file" = { menus = ["file", "context"], label = "Edit in Vim tab", when = "entry" }
+
+[contributes.key_suggestions]
+"vim-tab.edit-file" = ["E"]
